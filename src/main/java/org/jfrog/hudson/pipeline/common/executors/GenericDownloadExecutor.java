@@ -52,7 +52,7 @@ public class GenericDownloadExecutor implements Executor {
                 ws.act(new FilesResolverCallable(new JenkinsBuildInfoLog(listener),
                         resolverCredentials, server.getArtifactoryUrl(), spec, Utils.getProxyConfiguration(server)));
         if (failNoOp && resolvedDependencies.isEmpty()) {
-            throw new RuntimeException("Fail-no-op: No files were affected in the download process.");
+            throw new RuntimeException("Fail-no-op: No files were affected in the download process..");
         }
         String moduleId = StringUtils.isNotBlank(moduleName) ? moduleName : buildInfo.getName();
         new BuildInfoAccessor(this.buildInfo).appendDependencies(resolvedDependencies, moduleId);
