@@ -1,12 +1,5 @@
 version = 1
 
-test_patterns = ["*/src/test/**"]
-
-exclude_patterns = [
-    "**/resources/**",
-    "**/webapp/**"
-]
-
 [[analyzers]]
 name = "java"
 enabled = true
